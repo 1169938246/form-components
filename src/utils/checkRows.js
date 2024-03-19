@@ -1,5 +1,4 @@
-import findIndex from 'lodash/findIndex';
-import remove from 'lodash/remove';
+import {findIndex,remove} from  "lodash"
 
 export default (value, selectedRowKeys, selectedRows, param, type,getCheckboxProps) => {
   return {

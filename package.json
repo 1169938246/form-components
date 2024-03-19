@@ -1,14 +1,14 @@
 {
   "name": "fulu-form-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/bundle.js",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.5",
-    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.24.0",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
-    "autoprefixer": "8.0.0",
+    "autoprefixer": "^10.4.18",
     "core-js": "^3.31.0",
     "cross-env": "^7.0.3",
     "mini-css-extract-plugin": "^2.7.6",
@@ -20,15 +20,32 @@
     "rollup-plugin-postcss": "^4.0.2"
   },
   "scripts": {
+    "prebuild": "node generate-index.js",
     "build": "yarn run rollup -c",
     "dev": "yarn run rollup -c -w",
     "publish": "npm publish"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.1.4",
-    "antd": "^5.6.3",
+    "@babel/plugin-proposal-decorators": "^7.24.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "less": "3.9.0",
     "postcss-loader": "^7.3.3",
     "postcss-pxtorem": "5.1.1",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "peerDependencies": {
+    "antd": "^x.y.z",
+    "fl-pro": "^x.y.z",
+    "less": "^x.y.z",
+    "lodash": "^x.y.z",
+    "moment": "^a.b.c",
+    "react": "^x.y.z",
+    "react-color": "^x.y.z",
+    "react-dom": "^x.y.z",
+    "wangeditor": "^x.y.z"
   }
 }

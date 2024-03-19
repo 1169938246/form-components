@@ -1,29 +1,11 @@
-// const fs =require('fs')
-// const path = require('path')
-
-// const componentsDir = path.join(__dirname, 'components')
-// console.log(componentsDir,'componentsDir')
-// // 遍历组件文件夹
-// fs.readdirSync(componentsDir).forEach(file => {
-//     exports[file] = require(path.join(componentsDir, file));
-//   });
-
-// import fs from 'fs'
-// import path, { dirname } from 'path'
-// import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-// const componentsDir = path.join(__dirname, 'components')
-// const fileList = {}
-// fs.readdirSync(componentsDir).map(async(file) => {
-//     const modulePath = `${dirname}${file}`
-//     fileList = {...fileList,fileItem}
-//   });
-
-import UploadImage from './components/UploadImage/index'
-
-export {
-    UploadImage
-}
-
-
+export { default as ChromePickerFun } from './components/ChromePickerFun/index';
+export { default as CouponsModal } from './components/CouponsModal/index';
+export { default as CouponsModalSingle } from './components/CouponsModalSingle/index';
+export { default as EditorElemItem } from './components/EditorElemItem/index';
+export { default as MarketingActivityBox } from './components/MarketingActivityBox/index';
+export { default as PickProductModal } from './components/PickProductModal/index';
+export { default as ProductModal } from './components/ProductModal/index';
+export { default as RangeDatePicker } from './components/RangeDatePicker/index';
+export { default as RangeDatePickerShort } from './components/RangeDatePickerShort/index';
+export { default as SelectDate } from './components/SelectDate/index';
+export { default as UploadImage } from './components/UploadImage/index';

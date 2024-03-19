@@ -1,7 +1,19 @@
+# .npmignore
+
+# 忽略不必要的目录
 node_modules
-.git
 src
 utils
+coverage
+.babelrc
 .gitignore
-*.log
+rollup.config.mjs
+.npmrc
+yarn.lock
+generate-index.js
+# 保留必需的文件和目录
+!package.json
+!README.md
+!LICENSE
+# 包含编译后的库文件夹
 !lib/
