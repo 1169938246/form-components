@@ -25,7 +25,7 @@ export default {
         babel({
             exclude: 'node_modules/**', // 防止打包node_modules下的文件
         }),
-        peerDepsExternal(),
+        // peerDepsExternal(),
         resolve(), // 解析第三方模块
         commonjs(), // 将CommonJS模块转换为ES6模块
         // postcss(), //不使用less可以删除
@@ -40,6 +40,6 @@ export default {
         ],
         
     // 设置react为外部引用，可避免打包时打进去，否则警告(!) Unresolved dependencies
-    // external: ['react','moment','antd']
+    external: ['react','moment','antd','fl-pro','less','lodash','moment','react-color','react-dom','wangeditor']
 }
 
