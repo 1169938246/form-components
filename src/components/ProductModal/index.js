@@ -267,6 +267,11 @@ const mapStateToProps = (state) => {
         ...state,
     };
 };
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatch,
+  });
+
 const ProductModal = Form.create() (ProductModalWap);
 
-export default connect(mapStateToProps)(ProductModal);
+export default connect(mapStateToProps,mapDispatchToProps)(ProductModal);

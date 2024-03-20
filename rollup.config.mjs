@@ -40,6 +40,6 @@ export default {
         ],
         
     // 设置react为外部引用，可避免打包时打进去，否则警告(!) Unresolved dependencies
-    external: ['react','moment','antd','fl-pro','less','lodash','moment','react-color','react-dom','wangeditor']
+    external: ['react','moment','antd','fl-pro','less','lodash','moment','react-color','react-dom','wangeditor','dva']
 }
 
