@@ -1,6 +1,6 @@
 {
   "name": "fulu-form-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/bundle.js",
   "license": "MIT",
   "devDependencies": {
@@ -20,6 +20,7 @@
     "rollup-plugin-postcss": "^4.0.2"
   },
   "scripts": {
+    "version":"npm version patch",
     "prebuild": "node generate-index.js",
     "build": "yarn run rollup -c",
     "dev": "yarn run rollup -c -w",
@@ -38,14 +39,14 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {
-    "antd": "^x.y.z",
-    "fl-pro": "^x.y.z",
-    "less": "^x.y.z",
-    "lodash": "^x.y.z",
-    "moment": "^a.b.c",
-    "react": "^x.y.z",
-    "react-color": "^x.y.z",
-    "react-dom": "^x.y.z",
-    "wangeditor": "^x.y.z"
+    "antd": "^3.0.0",
+    "fl-pro": "*",
+    "less": "*",
+    "lodash": "*",
+    "moment": "*",
+    "react": "*",
+    "react-color": "*",
+    "react-dom": "*",
+    "wangeditor": "*"
   }
 }
