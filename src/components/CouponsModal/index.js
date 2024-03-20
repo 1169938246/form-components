@@ -8,8 +8,8 @@ import {
 } from "fl-pro";
 import { getScrollWidth } from "../../utils/common";
 import checkRows from "../../utils/checkRows";
-
-class CouponsModal extends Component {
+import { connect } from "dva";
+class CouponsModalWap extends Component {
     constructor(props) {
         super(props);
         const {couponCollectionScene} = props
@@ -275,4 +275,12 @@ class CouponsModal extends Component {
         );
     }
 }
-export default Form.create()(CouponsModal)
+
+const mapStateToProps = (state) => {
+    return {
+        ...state,
+    };
+  };
+const CouponsModal = Form.create() (CouponsModalWap);
+  
+export default connect(mapStateToProps)(CouponsModal);

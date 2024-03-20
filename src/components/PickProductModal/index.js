@@ -11,10 +11,10 @@ import {
   Button,
   Select,
 } from "antd";
-
+import { connect } from "dva";
 const FormItem = Form.Item;
 const Option = Select.Option;
-class PickProductModal extends Component {
+class PickProductModalWap extends Component {
   constructor(props) {
     super(props);
     const {value} = props;
@@ -427,5 +427,11 @@ class PickProductModal extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+      ...state,
+  };
+};
+const PickProductModal = Form.create() (PickProductModalWap);
 
-export default  Form.create()(PickProductModal)
+export default connect(mapStateToProps)(PickProductModal);

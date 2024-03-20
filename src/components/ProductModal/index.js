@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import { connect } from "dva";
 import { Form, Modal, Spin, Popconfirm, message } from "antd";
 import { SearchForm, Table } from "fl-pro";
 import checkRows from "../../utils/checkRows";
 import { getScrollWidth } from "../../utils/common";
-class ProductModal extends React.Component {
+class ProductModalWap extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -261,5 +262,11 @@ class ProductModal extends React.Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        ...state,
+    };
+};
+const ProductModal = Form.create() (ProductModalWap);
 
-export default  Form.create()(ProductModal)
+export default connect(mapStateToProps)(ProductModal);

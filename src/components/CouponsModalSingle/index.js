@@ -6,7 +6,8 @@ import {
   message,
 } from "antd";
 import { SearchForm, Table } from "fl-pro";
-class CouponsModalSingle extends Component {
+import { connect } from "dva";
+class CouponsModalSingleWap extends Component {
   constructor(props) {
     super(props);
     const { value, couponCollectionScene } = props;
@@ -200,4 +201,12 @@ class CouponsModalSingle extends Component {
   }
 }
 
-export default  Form.create()(CouponsModalSingle)
+
+const mapStateToProps = (state) => {
+  return {
+      ...state,
+  };
+};
+const CouponsModalSingle = Form.create() (CouponsModalSingleWap);
+
+export default connect(mapStateToProps)(CouponsModalSingle);
