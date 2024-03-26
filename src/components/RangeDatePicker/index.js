@@ -4,7 +4,7 @@
 import React from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
-
+import PropTypes from 'prop-types';
 const { RangePicker } = DatePicker;
 
 const CustomRangePicker = ({ value, onChange, disabledAfter, ...restProps }) => {
@@ -42,6 +42,15 @@ const CustomRangePicker = ({ value, onChange, disabledAfter, ...restProps }) => 
       {...restProps}
     />
   );
+}
+
+CustomRangePicker.prototypes = {
+   /**
+   * value 传递一个数组包含了开始时间和结束时间 [YYYY-MM-DD HH:mm:ss,YYYY-MM-DD HH:mm:ss]
+   */
+  value: PropTypes.array,
+  onChange: PropTypes.func,
+  disabledAfter: PropTypes.number,
 }
 
 export default CustomRangePicker;

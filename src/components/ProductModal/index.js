@@ -268,9 +268,11 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    dispatch,
-  });
+const mapDispatchToProps = (dispatch) => {
+    return {
+        ...dispatch,
+    };
+  };
 
 const ProductModal = Form.create() (ProductModalWap);
 

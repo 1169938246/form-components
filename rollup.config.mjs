@@ -1,13 +1,15 @@
 import babel from 'rollup-plugin-babel'
 import postcss from 'rollup-plugin-postcss'
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import del from 'rollup-plugin-delete';
 import { terser } from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
+import typescript from '@rollup/plugin-typescript';
 
-export default {
+const env = process.env.NODE_ENV;
+
+const config = {
     input: './src/index.js',
     output: {
         file: './lib/bundle.js',
@@ -36,10 +38,17 @@ export default {
             extract: true,
             minimize: true,
             plugins: [autoprefixer()], // 自动添加浏览器前缀
+          }),
+          typescript({
+            // 禁用类型检查
+            check: false,
+            // 其他 TypeScript 插件选项...
           })
         ],
         
     // 设置react为外部引用，可避免打包时打进去，否则警告(!) Unresolved dependencies
     external: ['react','moment','antd','fl-pro','less','lodash','moment','react-color','react-dom','wangeditor','dva']
 }
+
+export default  config
 
