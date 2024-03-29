@@ -1,2 +1,1 @@
-详细文档参考
-https://alidocs.dingtalk.com/i/nodes/20eMKjyp81RNewbmuo3BGZ0qWxAZB1Gv?utm_scene=person_space
+这是基于ant3.x 封装的各个组件和fomr表单进行联动的组件
